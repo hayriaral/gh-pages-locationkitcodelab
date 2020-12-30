@@ -5,12 +5,9 @@ description: 1
 
 To get started, clone the GitHub repository of the code and switch to the start branch.
 
-<pre>
-<div id="copy-button1" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div>
-<code>$git clone https://github.com/huaweicodelabs/LocationKit/tree/master/activity-identification-and-geofence
-<cite class="pln"></cite></code>
-</pre>
-
+<pre><div id="copy-button1" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>$git clone https://github.com/huaweicodelabs/LocationKit/tree/master/activity-identification-and-geofence
+<span class="pln">
+</span></code></pre>
 
 
 If you do not have git you can get the project as a zip file:
