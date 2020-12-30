@@ -1,6 +1,6 @@
 ---
-title: "Step 2: Create and add geofence"
-description: 20
+title: "Step 3: Handle geofence transition events"
+description: 5
 ---
 
 **Create pending intent**
@@ -29,14 +29,14 @@ You will create a geofence service client to call geofence-related APIs.
 
 1. In `MainFragment.kt`, above the `onViewCreated()` method, declare a private type of `GeofenceService` variable which named `geofenceService`.
 
-   <pre><div id="copy-button6" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 2.2:
+   <pre><div id="copy-button7" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 2.2:
    private lateinit var geofenceService: GeofenceService
    <span class="pln">
    </span></code></pre>
 
 2. In `MainFragment.kt`, in the `onViewCreated()` method, initialize `geofenceService` which is already declared above.
 
-   <pre><div id="copy-button6" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 2.3:
+   <pre><div id="copy-button8" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 2.3:
    geofenceService = LocationServices.getGeofenceService(activity)
    <span class="pln">
    </span></code></pre>
@@ -54,7 +54,7 @@ You will build a geofence object and a geofence request in order to add geofence
 
    Finally, return the geofence.
 
-   <pre><div id="copy-button6" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 2.4:
+   <pre><div id="copy-button9" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 2.4:
    return Geofence.Builder()
        .setUniqueId(Id)
        .setRoundArea(latLng.latitude, latLng.longitude, radius)
@@ -66,7 +66,7 @@ You will build a geofence object and a geofence request in order to add geofence
 
 2. In `MainFragment.kt`, in the `buildGeofenceRequest()` function, build a geofence request using `GeofenceRequest.Builder()`. Create geofence to be monitored by geofence service, and set initial trigger callback for conversions. Then, return the request.
 
-   <pre><div id="copy-button6" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 2.5:
+   <pre><div id="copy-button10" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 2.5:
    return GeofenceRequest.Builder()
        .createGeofence(geofence)
        .setInitConversions(GeofenceRequest.ENTER_INIT_CONVERSION)
@@ -80,7 +80,7 @@ Construct a request to add a geofence. After you send the request, the system wi
 
 1. In `MainFragment.kt`, in `startGeofence()` function, instantiate a variable type of `Geofence` by call `buildGeofence()` method which is created above.
 
-   <pre><div id="copy-button6" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 2.6:
+   <pre><div id="copy-button11" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 2.6:
    val geofence: Geofence = buildGeofence(
        landmark.geofenceUniqueId, landmark.latLng, landmark.radius,
        Geofence.ENTER_GEOFENCE_CONVERSION
@@ -90,14 +90,14 @@ Construct a request to add a geofence. After you send the request, the system wi
 
 2. In `MainFragment.kt`, in `startGeofence()` function, instantiate a variable type of `GeofenceRequest` by call `buildGeofenceRequest()` method which is created above.
 
-   <pre><div id="copy-button6" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 2.7:
+   <pre><div id="copy-button12" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 2.7:
    val geofenceRequest: GeofenceRequest = buildGeofenceRequest(geofence)
    <span class="pln">
    </span></code></pre>
 
 3. In `MainFragment.kt`, in `startGeofence()` function, use `geofenceService`  to add geofence. At the beginning, remove existing geofence that in use by calling `deleteGeofenceList()`. In any case of the removal, add new geofence by passing `geofencePendingIntent`, and `geofenceRequest` to `createGeofenceList()` method. If adding geofence succeed, inform user with `Toast`. Otherwise, put message into `Log` calling `getGeofenceErrorString()` function.
 
-   <pre><div id="copy-button6" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 2.8:
+   <pre><div id="copy-button13" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 2.8:
    geofenceService.deleteGeofenceList(geofencePendingIntent)?.run {
        addOnCompleteListener {
            geofenceService.createGeofenceList(geofenceRequest, geofencePendingIntent)?.run {
@@ -128,7 +128,7 @@ Construct a request to add a geofence. After you send the request, the system wi
 
 4. In `GeofenceHelper.kt`, in `getGeofenceErrorString()` function, return `GeofenceErrorCodes` as `String`.
 
-   <pre><div id="copy-button6" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 2.9:
+   <pre><div id="copy-button14" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 2.9:
    if (exception is ApiException) {
        when (exception.statusCode) {
            GeofenceErrorCodes.GEOFENCE_UNAVAILABLE -> return "GEOFENCE_UNAVAILABLE"
