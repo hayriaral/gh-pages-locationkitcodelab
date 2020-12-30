@@ -1,5 +1,5 @@
 ---
-title: Step 1: Check library and receiver and assign permissions
+title: "Step 1: Check library and receiver and assign permissions"
 description: 3
 ---
 
