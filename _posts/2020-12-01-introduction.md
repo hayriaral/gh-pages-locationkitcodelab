@@ -44,14 +44,15 @@ In this codelab, you will use the demo project that has been created for you to 
 
 <div>
     <div style="padding: 5px">
-        <img src="D:\OtherProjects\gh-pages-md\assets\LocationKit1.jpg" style="width: 375.00px" ; padding:5px" />
-        <img src="D:\OtherProjects\gh-pages-md\assets\LocationKit2.jpg" style="width: 375.00px" ; padding:5px" />
+        <img src="https://github.com/hayricaral/gh-pages-locationkitcodelab/blob/main/assets/LocationKit1.jpg" style="width: 375.00px" ; padding:5px" />
+        <img src="https://github.com/hayricaral/gh-pages-locationkitcodelab/blob/main/assets/LocationKit2.jpg" style="width: 375.00px" ; padding:5px" />
     </div>
     <div style="padding: 5px">
-        <img src="D:\OtherProjects\gh-pages-md\assets\LocationKit3.jpg" style="width: 375.00px" ; padding:5px" />
-        <img src="D:\OtherProjects\gh-pages-md\assets\LocationKit4.jpg" style="width: 375.00px" ; padding:5px" />
+        <img src="https://github.com/hayricaral/gh-pages-locationkitcodelab/blob/main/assets/LocationKit3.jpg" ; padding:5px" />
+        <img src="https://github.com/hayricaral/gh-pages-locationkitcodelab/blob/main/assets/LocationKit4.jpg" style="width: 375.00px" ; padding:5px" />
     </div>
 </div>
+
 
 
 **What you will learn** 
