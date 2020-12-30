@@ -7,30 +7,30 @@ To use activity identification and geofence in your app, you must implement the 
 
 1. Check HMS library required for activity identification and geofence in the **build.gradle** file, in app directory. There is no action needed for the step, just check the dependency.
 
-<pre><div id="copy-button2" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>implementation 'com.huawei.hms:location:5.0.4.300'
-<span class="pln">
-</span></code></pre>
+   <pre><div id="copy-button2" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>implementation 'com.huawei.hms:location:5.0.4.300'
+   <span class="pln">
+   </span></code></pre>
+
 2. Check **receiver** tag in the **AndroidManifest.xml** file, in **application** tag. There is no action needed for the step, just check the receiver.
 
-<pre><div id="copy-button3" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code><span class="tag">&lt;receiver</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">".util.LocationBroadcastReceiver"</span><span class="tag">/&gt;</span>
-<span class="pln">
-</span></code></pre>
+   <pre><div id="copy-button3" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code><span class="tag">&lt;receiver</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">".util.LocationBroadcastReceiver"</span><span class="tag">/&gt;</span>
+   <span class="pln">
+   </span></code></pre>
 
 3. Specify **android.permission.ACCESS_FINE_LOCATION,** **android.permission.ACCESS_COARSE_LOCATION** and **android.permission.ACCESS_BACKGROUND_LOCATION** permissions in the **AndroidManifest.xml** file to use geofence service.
 
-<pre><div id="copy-button4" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code><span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"android.permission.ACCESS_FINE_LOCATION"</span><span class="tag">/&gt;</span><span class="pln"></span>
-<span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"android.permission.ACCESS_COARSE_LOCATION"</span><span class="tag">/&gt;</span><span class="pln">
-</span><span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"android.permission.ACCESS_BACKGROUND_LOCATION"</span><span class="tag">/&gt;</span>
-<span class="pln">
-</span></code></pre>
-
+   <pre><div id="copy-button4" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code><span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"android.permission.ACCESS_FINE_LOCATION"</span><span class="tag">/&gt;</span><span class="pln"></span>
+   <span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"android.permission.ACCESS_COARSE_LOCATION"</span><span class="tag">/&gt;</span><span class="pln">
+   </span><span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"android.permission.ACCESS_BACKGROUND_LOCATION"</span><span class="tag">/&gt;</span>
+   <span class="pln">
+   </span></code></pre>
 
 4. Specify **com.huawei.hms.permission.ACTIVITY_RECOGNITION** and **android.permission.ACTIVITY_RECOGNITION** permissions in the **AndroidManifest.xml** file to use activity identification service.
 
-<pre><div id="copy-button5" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code><span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"android.permission.ACTIVITY_RECOGNITION"</span><span class="tag">/&gt;</span><span class="pln"></span>
-<span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"com.huawei.hms.permission.ACTIVITY_RECOGNITION"</span><span class="tag">/&gt;</span>
-<span class="pln">
-</span></code></pre>
+   <pre><div id="copy-button5" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code><span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"android.permission.ACTIVITY_RECOGNITION"</span><span class="tag">/&gt;</span><span class="pln"></span>
+   <span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"com.huawei.hms.permission.ACTIVITY_RECOGNITION"</span><span class="tag">/&gt;</span>
+   <span class="pln">
+   </span></code></pre>
 
 Your app can now support activity identification and geofence, you just need to add the code step by step.
 
