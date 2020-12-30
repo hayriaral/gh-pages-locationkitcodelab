@@ -8,9 +8,10 @@ description: 1
 -   A computer (desktop or laptop)
 -   A Huawei mobile phone which is Android 9 (API level 28) or later, to be used for demo project running and service debugging.
 
-<table style="padding:5px" border="2" >
-    <td style="background-color:#d9ead3"><b>Note:</b> Please prepare the preceding hardware environment and relevant devices in advance.</td>
-</table>
+<aside class="special">
+	<p><strong>Note:</strong> Please prepare the preceding hardware environment and relevant devices in advance.</p>
+</aside>
+
 
 **Software Requirements**
 -------------------------
@@ -20,9 +21,10 @@ description: 1
 -   EMUI 9.1.1 or later
 -   HMS Core (APK) 5.0.4.300 or later
 
-<table style="padding:5px" border="2" >
-    <td style="background-color:#d9ead3"><b>Note:</b> Please prepare the preceding software environment in advance.</td>
-</table>
+<aside class="special">
+	<p><strong>Note:</strong> Please prepare the preceding software environment in advance.</p>
+</aside>
+
 
 **Required Knowledge**
 ----------------------

@@ -31,10 +31,9 @@ Location Kit combines the GNSS, Wi-Fi, and base station location functionalities
 
    - Activity Identification Updates: Proactively obtains the current device activity status.
    - Activity Conversion Updates: Detects activity conversion updates of the current device.
-<table style="padding:5px" border="2" >
-    <td style="background-color:#d9ead3"><b>Note:</b> In this codelab, fused location will not covered.</td>
-</table>
-
+<aside class="special">
+	<p><strong>Note:</strong> In this codelab, fused location will not covered.</p>
+</aside>
 
 
 **What you will do**
@@ -44,14 +43,15 @@ In this codelab, you will use the demo project that has been created for you to 
 
 <div>
     <div style="padding: 5px">
-        <img src="https://github.com/hayricaral/gh-pages-locationkitcodelab/blob/main/assets/LocationKit1.jpg" style="width: 375.00px" ; padding:5px" />
-        <img src="https://github.com/hayricaral/gh-pages-locationkitcodelab/blob/main/assets/LocationKit2.jpg" style="width: 375.00px" ; padding:5px" />
+        <img src="https://raw.githubusercontent.com/hayricaral/gh-pages-locationkitcodelab/main/assets/LocationKit1.jpg" style="width: 375.00px" ; padding:5px" />
+        <img src="https://raw.githubusercontent.com/hayricaral/gh-pages-locationkitcodelab/main/assets/LocationKit2.jpg" style="width: 375.00px" ; padding:5px" />
     </div>
     <div style="padding: 5px">
-        <img src="https://github.com/hayricaral/gh-pages-locationkitcodelab/blob/main/assets/LocationKit3.jpg" ; padding:5px" />
-        <img src="https://github.com/hayricaral/gh-pages-locationkitcodelab/blob/main/assets/LocationKit4.jpg" style="width: 375.00px" ; padding:5px" />
+        <img src="https://raw.githubusercontent.com/hayricaral/gh-pages-locationkitcodelab/main/assets/LocationKit3.jpg" style="width: 375.00px" ; padding:5px" />
+        <img src="https://raw.githubusercontent.com/hayricaral/gh-pages-locationkitcodelab/main/assets/LocationKit4.jpg" style="width: 375.00px" ; padding:5px" />
     </div>
 </div>
+
 
 
 
