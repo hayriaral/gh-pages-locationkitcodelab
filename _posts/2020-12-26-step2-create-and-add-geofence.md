@@ -1,11 +1,11 @@
 ---
-title: "Step 3: Handle geofence transition events"
-description: 5
+title: "Step 2: Create and add geofence"
+description: 20
 ---
 
 **Create pending intent**
 
-You will create a PendingIntent in order to dynamically register to BroadcastReceiver through it.
+You will create a PendingIntent in order to dynamically register to `BroadcastReceiver` through it.
 
 1. In `MainFragment.kt`, above the `onViewCreated()` method, create a private type of `PendingIntent` variable which named `geofencePendingIntent` with lazy initialization. `getGeofenceAction()` returns action name as `String`, and `getGeofenceRequestCode()` returns request code as `Integer`. Both are implemented in `GeofenceHelper.kt`.
 

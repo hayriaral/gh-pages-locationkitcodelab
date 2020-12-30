@@ -1,6 +1,6 @@
 ---
 title: "Step 3: Handle geofence transition events"
-description: 20
+description: 5
 ---
 
 When detecting a geofence trigger event, the system broadcasts a notification to the user using `PendingIntent`.
