@@ -34,28 +34,19 @@ Location Kit combines the GNSS, Wi-Fi, and base station location functionalities
 <aside class="special">
 	<p><strong>Note:</strong> In this codelab, fused location will not covered.</p>
 </aside>
-<img src="D:\DTSE\Codelab\gh-pages-locationkitcodelab\assets\LocationKit1.jpg" style="zoom:50%;" />
-
 **What you will do**
 ------------------------
 
 In this codelab, you will use the demo project that has been created for you to experience with Huawei Mobile Services Location Kit’s Geofence and Activity Identification features. Through the demo project, you will get experience developing a geofence and physical activity identification to the user.
 
-<img src="https://raw.githubusercontent.com/hayricaral/gh-pages-locationkitcodelab/main/assets/LocationKit1.jpg"/>
-<img src="https://raw.githubusercontent.com/hayricaral/gh-pages-locationkitcodelab/main/assets/LocationKit2.jpg"/>
-<img src="https://raw.githubusercontent.com/hayricaral/gh-pages-locationkitcodelab/main/assets/LocationKit3.jpg"/>
-<img src="https://raw.githubusercontent.com/hayricaral/gh-pages-locationkitcodelab/main/assets/LocationKit4.jpg"/>
-
-
-
 <div>
     <div style="padding: 5px">
-        <img src="https://raw.githubusercontent.com/hayricaral/gh-pages-locationkitcodelab/main/assets/LocationKit1.jpg" style="width: 375.00px" ; "padding:5px" />
-        <img src="https://raw.githubusercontent.com/hayricaral/gh-pages-locationkitcodelab/main/assets/LocationKit2.jpg" style="width: 375.00px" ; "padding:5px" />
+        <img style="width: 375.00px ; padding: 5px" src="https://raw.githubusercontent.com/hayricaral/gh-pages-locationkitcodelab/main/assets/LocationKit1.jpg" onclick="imageclick(src)">
+        <img style="width: 375.00px ; padding: 5px" src="https://raw.githubusercontent.com/hayricaral/gh-pages-locationkitcodelab/main/assets/LocationKit2.jpg" onclick="imageclick(src)">
     </div>
     <div style="padding: 5px">
-        <img src="https://raw.githubusercontent.com/hayricaral/gh-pages-locationkitcodelab/main/assets/LocationKit3.jpg" style="width: 375.00px" ; "padding:5px" />
-        <img src="https://raw.githubusercontent.com/hayricaral/gh-pages-locationkitcodelab/main/assets/LocationKit4.jpg" style="width: 375.00px" ; "padding:5px" />
+        <img style="width: 375.00px ; padding: 5px" src="https://raw.githubusercontent.com/hayricaral/gh-pages-locationkitcodelab/main/assets/LocationKit3.jpg" onclick="imageclick(src)">
+        <img style="width: 375.00px ; padding: 5px" src="https://raw.githubusercontent.com/hayricaral/gh-pages-locationkitcodelab/main/assets/LocationKit4.jpg" onclick="imageclick(src)">
     </div>
 </div>
 
