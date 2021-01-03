@@ -35,5 +35,4 @@ You should be familiar with:
 -   Android development basics
 -   MVVM architecture basics
 -   Runtime permissions
--   Including external libraries
 
