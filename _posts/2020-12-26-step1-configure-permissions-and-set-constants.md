@@ -30,7 +30,7 @@ To use activity identification and geofence in your app, you must implement the 
    <span class="pln">
    </span></code></pre>
 
-4. If you create your own project, you need to change some constant variables to use broadcast receiver and map capabilities. In **util** package, go `Constants` class, set the package name and AppGallery Connect API key as yours.
+4. If you create your own project, you need to change some constant variables to use broadcast receiver and map capabilities. In **util** package, go `Constants.kt` class, set the package name and AppGallery Connect API key as yours.
 
    You can find the API key, in AppGallery console, in **Project setting** > **General information.**
 

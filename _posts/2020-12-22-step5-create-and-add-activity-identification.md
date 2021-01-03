@@ -42,5 +42,23 @@ You will create an activity identification service client to call activity ident
    <span class="pln">
    </span></code></pre>
 
+**Start activity identification**
 
+You will start activity identification if activity recognition permission has been granted before.
 
+1. In `MainFragment.kt`, in `startActivityIdentification()` function, use `activityIdentificationService` to add activity identification. First, check the activity recognition permission calling `hasActivityRecognitionPermission()` function as an **if** condition. If the permission has not been granted before, the function will ask it. Then, add new activity identification by passing interval parameter in milliseconds as `Long`, and `activityIdentificationPendingIntent` to `createActivityIdentificationUpdates()` method. Copy the code below into the **if** statement.
+
+<pre><div id="copy-button20" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 5.4:
+activityIdentificationService.createActivityIdentificationUpdates(
+    5000,
+    activityIdentificationPendingIntent
+)?.run {
+    addOnSuccessListener {
+        Log.i(TAG, "Activity Identification has been started.")
+    }
+    addOnFailureListener {
+        Log.e(TAG, "Failed to start Activity Conversion updates.")
+    }
+}
+<span class="pln">
+</span></code></pre>

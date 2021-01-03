@@ -88,11 +88,12 @@ You’ll be using the start branch, which is the starting point for the codelab.
   </span><span class="pun">-</span><span class="pln">keep </span><span class="kwd">class</span><span class="pln"> com</span><span class="pun">.</span><span class="pln">hianalytics</span><span class="pun">.</span><span class="pln">android</span><span class="pun">.**{*;}</span><span class="pln">
   </span><span class="pun">-</span><span class="pln">keep </span><span class="kwd">class</span><span class="pln"> com</span><span class="pun">.</span><span class="pln">huawei</span><span class="pun">.</span><span class="pln">updatesdk</span><span class="pun">.**{*;}</span><span class="pln">
   </span><span class="pun">-</span><span class="pln">keep </span><span class="kwd">class</span><span class="pln"> com</span><span class="pun">.</span><span class="pln">huawei</span><span class="pun">.</span><span class="pln">hms</span><span class="pun">.**{*;}</span><span class="pln">
-  </span></code></pre>
+  	</span></code></pre>
 
 - If you are using AndResGuard, add it to the allowlist in the obfuscation script file.
 
-  <pre><div id="copy-button8" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code><span class="str"> "R.string.hms*"</span><span class="pun">,</span><span class="pln">
+  <pre><div id="copy-button8" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>
+  <span class="str">"R.string.hms*"</span><span class="pun">,</span><span class="pln">
   </span><span class="str">"R.string.connect_server_fail_prompt_toast"</span><span class="pun">,</span><span class="pln">
   </span><span class="str">"R.string.getting_message_fail_prompt_toast"</span><span class="pun">,</span><span class="pln">
   </span><span class="str">"R.string.no_available_network_prompt_toast"</span><span class="pun">,</span><span class="pln">
@@ -105,7 +106,7 @@ You’ll be using the start branch, which is the starting point for the codelab.
   </span><span class="str">"R.dimen.upsdk*"</span><span class="pun">,</span><span class="pln">
   </span><span class="str">"R.style.upsdk*"</span><span class="pun">,</span><span class="pln">
   </span><span class="str">"R.string.agc*"</span><span class="pln">
-  </span></code></pre>
+  	</span></code></pre>
 
 **Step 4**: In the Android Studio window, choose **File** \> **Sync Project with Gradle Files** to synchronize the project.
 
