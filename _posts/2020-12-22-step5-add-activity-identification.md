@@ -1,5 +1,5 @@
 ---
-title: "Step 5: Create and add activity identification"
+title: "Step 5: Add activity identification"
 description: 15
 ---
 

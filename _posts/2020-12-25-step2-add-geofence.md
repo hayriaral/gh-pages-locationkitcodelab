@@ -1,5 +1,5 @@
 ---
-title: "Step 2: Create and add geofence"
+title: "Step 2: Add geofence"
 description: 20
 ---
 
