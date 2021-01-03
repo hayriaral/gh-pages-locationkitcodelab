@@ -61,11 +61,12 @@ You’ll be using the start branch, which is the starting point for the codelab.
 
   <pre><div id="copy-button4" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code><span class="pln">dependencies </span><span class="pun">{</span><span class="pln">
   		</span><span class="pun">...</span><span class="pln">
-      </span><span class="str">	//Location Kit</span><span class="pln">
+      </span><span class="str">		//Location Kit</span><span class="pln">
   		implementation </span><span class="str">'com.huawei.hms:location:5.0.4.300'</span><span class="pln">
   		</span><span class="pun">...</span><span class="pln">
   	</span><span class="pun">}</span><span class="pln">
   	</span></code></pre>
+
 
   Please, refer to [latest version](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/version-change-history-0000001050986155) for Location Kit.
 
@@ -78,33 +79,33 @@ You’ll be using the start branch, which is the starting point for the codelab.
 
 - Configure the following information in the **app/proguard-rules.pro** file:
 
-  <pre><div id="copy-button7" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>                <span class="pun">-</span><span class="pln">ignorewarnings</span><span class="pln">
-  		</span><span class="pun">-</span><span class="pln">keepattributes </span><span class="pun">*</span><span class="typ">Annotation</span><span class="pun">*</span><span class="pln">
-  		</span><span class="pun">-</span><span class="pln">keepattributes </span><span class="typ">Exceptions</span><span class="pln">
-  		</span><span class="pun">-</span><span class="pln">keepattributes </span><span class="typ">InnerClasses</span><span class="pln">
-  		</span><span class="pun">-</span><span class="pln">keepattributes </span><span class="typ">Signature</span><span class="pln">
-  		</span><span class="pun">-</span><span class="pln">keepattributes </span><span class="typ">SourceFile</span><span class="pun">,</span><span class="typ">LineNumberTable</span><span class="pln">
-  		</span><span class="pun">-</span><span class="pln">keep </span><span class="kwd">class</span><span class="pln"> com</span><span class="pun">.</span><span class="pln">hianalytics</span><span class="pun">.</span><span class="pln">android</span><span class="pun">.**{*;}</span><span class="pln">
-  		</span><span class="pun">-</span><span class="pln">keep </span><span class="kwd">class</span><span class="pln"> com</span><span class="pun">.</span><span class="pln">huawei</span><span class="pun">.</span><span class="pln">updatesdk</span><span class="pun">.**{*;}</span><span class="pln">
-  		</span><span class="pun">-</span><span class="pln">keep </span><span class="kwd">class</span><span class="pln"> com</span><span class="pun">.</span><span class="pln">huawei</span><span class="pun">.</span><span class="pln">hms</span><span class="pun">.**{*;}</span><span class="pln">
-  	</span></code></pre>
+  <pre><div id="copy-button7" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code><span class="pun">-</span><span class="pln">ignorewarnings</span><span class="pln">
+  </span><span class="pun">-</span><span class="pln">keepattributes </span><span class="pun">*</span><span class="typ">Annotation</span><span class="pun">*</span><span class="pln">
+  </span><span class="pun">-</span><span class="pln">keepattributes </span><span class="typ">Exceptions</span><span class="pln">
+  </span><span class="pun">-</span><span class="pln">keepattributes </span><span class="typ">InnerClasses</span><span class="pln">
+  </span><span class="pun">-</span><span class="pln">keepattributes </span><span class="typ">Signature</span><span class="pln">
+  </span><span class="pun">-</span><span class="pln">keepattributes </span><span class="typ">SourceFile</span><span class="pun">,</span><span class="typ">LineNumberTable</span><span class="pln">
+  </span><span class="pun">-</span><span class="pln">keep </span><span class="kwd">class</span><span class="pln"> com</span><span class="pun">.</span><span class="pln">hianalytics</span><span class="pun">.</span><span class="pln">android</span><span class="pun">.**{*;}</span><span class="pln">
+  </span><span class="pun">-</span><span class="pln">keep </span><span class="kwd">class</span><span class="pln"> com</span><span class="pun">.</span><span class="pln">huawei</span><span class="pun">.</span><span class="pln">updatesdk</span><span class="pun">.**{*;}</span><span class="pln">
+  </span><span class="pun">-</span><span class="pln">keep </span><span class="kwd">class</span><span class="pln"> com</span><span class="pun">.</span><span class="pln">huawei</span><span class="pun">.</span><span class="pln">hms</span><span class="pun">.**{*;}</span><span class="pln">
+  </span></code></pre>
 
 - If you are using AndResGuard, add it to the allowlist in the obfuscation script file.
 
-  <pre><div id="copy-button8" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>               <span class="str"> "R.string.hms*"</span><span class="pun">,</span><span class="pln">
-  		</span><span class="str">"R.string.connect_server_fail_prompt_toast"</span><span class="pun">,</span><span class="pln">
-  		</span><span class="str">"R.string.getting_message_fail_prompt_toast"</span><span class="pun">,</span><span class="pln">
-  		</span><span class="str">"R.string.no_available_network_prompt_toast"</span><span class="pun">,</span><span class="pln">
-  		</span><span class="str">"R.string.third_app_*"</span><span class="pun">,</span><span class="pln">
-  		</span><span class="str">"R.string.upsdk_*"</span><span class="pun">,</span><span class="pln">
-  		</span><span class="str">"R.layout.hms*"</span><span class="pun">,</span><span class="pln">
-  		</span><span class="str">"R.layout.upsdk_*"</span><span class="pun">,</span><span class="pln"> 
-  		</span><span class="str">"R.drawable.upsdk*"</span><span class="pun">,</span><span class="pln">
-  		</span><span class="str">"R.color.upsdk*"</span><span class="pun">,</span><span class="pln"> 
-  		</span><span class="str">"R.dimen.upsdk*"</span><span class="pun">,</span><span class="pln">
-  		</span><span class="str">"R.style.upsdk*"</span><span class="pun">,</span><span class="pln">
-  		</span><span class="str">"R.string.agc*"</span><span class="pln">
-  		</span></code></pre>
+  <pre><div id="copy-button8" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code><span class="str"> "R.string.hms*"</span><span class="pun">,</span><span class="pln">
+  </span><span class="str">"R.string.connect_server_fail_prompt_toast"</span><span class="pun">,</span><span class="pln">
+  </span><span class="str">"R.string.getting_message_fail_prompt_toast"</span><span class="pun">,</span><span class="pln">
+  </span><span class="str">"R.string.no_available_network_prompt_toast"</span><span class="pun">,</span><span class="pln">
+  </span><span class="str">"R.string.third_app_*"</span><span class="pun">,</span><span class="pln">
+  </span><span class="str">"R.string.upsdk_*"</span><span class="pun">,</span><span class="pln">
+  </span><span class="str">"R.layout.hms*"</span><span class="pun">,</span><span class="pln">
+  </span><span class="str">"R.layout.upsdk_*"</span><span class="pun">,</span><span class="pln"> 
+  </span><span class="str">"R.drawable.upsdk*"</span><span class="pun">,</span><span class="pln">
+  </span><span class="str">"R.color.upsdk*"</span><span class="pun">,</span><span class="pln"> 
+  </span><span class="str">"R.dimen.upsdk*"</span><span class="pun">,</span><span class="pln">
+  </span><span class="str">"R.style.upsdk*"</span><span class="pun">,</span><span class="pln">
+  </span><span class="str">"R.string.agc*"</span><span class="pln">
+  </span></code></pre>
 
 **Step 4**: In the Android Studio window, choose **File** \> **Sync Project with Gradle Files** to synchronize the project.
 
