@@ -113,21 +113,8 @@ You will build an activity conversion information object and create an activity 
 
 You will start activity conversion if activity recognition permission has been granted before.
 
-1. <pre><div id="copy-button36" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 8.4:
-activityIdentificationService.createActivityConversionUpdates(
-       createActivityConversionRequest(),
-       activityConversionPendingIntent
-   )?.run {
-       addOnSuccessListener {
-           Log.i(TAG, "Activity Conversion updates has been started.")
-       }
-       addOnFailureListener {
-           Log.i(TAG, "Failed to start Activity Conversion updates.")
-       }
-   }
-   <span class="pln">
-   </span></code></pre>
-   
+1. In `MainFragment.kt`, in `startActivityConversion()` function, use `activityIdentificationService` to add activity conversion. Add new activity conversion by passing `activityConversionPendingIntent`, and `createActivityConversionRequest()` functions to `createActivityConversionUpdates()` method.
+
    <pre><div id="copy-button36" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 8.4:
    activityIdentificationService.createActivityConversionUpdates(
        createActivityConversionRequest(),
