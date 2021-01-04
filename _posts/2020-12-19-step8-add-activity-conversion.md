@@ -107,7 +107,7 @@ You will build an activity conversion information object and create an activity 
    )
    return ActivityConversionRequest(activityConversions)
    <span class="pln">
-   	</span></code></pre>
+   </span></code></pre>
 
 **Start activity conversion**
 
