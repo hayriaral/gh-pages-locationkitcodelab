@@ -46,30 +46,30 @@ You will create a geofence service client to call geofence-related APIs.
 You will build a geofence object and a geofence request in order to add geofence.
 
 1. In `MainFragment.kt`, in the `buildGeofence()` function, build a geofence using `Geofence.Builder()`. Set the followings: 
-       
-       - A request ID to identify the geofence.
+
+   - A request ID to identify the geofence.
    - The circular region of the geofence.
    - The transition types.
-- The expiration duration of the geofence.
-       
-       Finally, return the geofence.
-       
-       <pre><div id="copy-button15" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 2.4:
-       return Geofence.Builder()
-           .setUniqueId(Id)
-           .setRoundArea(latLng.latitude, latLng.longitude, radius)
-           .setConversions(transitionTypes)
-           .setValidContinueTime(Geofence.GEOFENCE_NEVER_EXPIRE)
-           .build()
-       <span class="pln">
-       </span></code></pre>
-       
-2. In `MainFragment.kt`, in the `buildGeofenceRequest()` function, build a geofence request using `GeofenceRequest.Builder()`. Create geofence to be monitored by geofence service, and set initial trigger callback for conversions. Then, return the request.
+   - The expiration duration of the geofence.
 
-   <pre><div id="copy-button16" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 2.5:
+   Finally, return the geofence.
+
+   <pre><div id="copy-button15" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 2.4:
    return GeofenceRequest.Builder()
        .createGeofence(geofence)
        .setInitConversions(GeofenceRequest.ENTER_INIT_CONVERSION)
+       .build()
+   <span class="pln">
+   </span></code></pre>
+
+2. In `MainFragment.kt`, in the `buildGeofenceRequest()` function, build a geofence request using `GeofenceRequest.Builder()`. Create geofence to be monitored by geofence service, and set initial trigger callback for conversions. Then, return the request.
+
+   <pre><div id="copy-button16" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 2.5:
+   return Geofence.Builder()
+       .setUniqueId(Id)
+       .setRoundArea(latLng.latitude, latLng.longitude, radius)
+       .setConversions(transitionTypes)
+       .setValidContinueTime(Geofence.GEOFENCE_NEVER_EXPIRE)
        .build()
    <span class="pln">
    </span></code></pre>
