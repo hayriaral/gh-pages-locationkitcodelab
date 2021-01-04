@@ -7,7 +7,7 @@ When you no longer need to receive activity identification, you can remove it th
 
 1. In `MainFragment.kt`, in `removeActivityIdentification()` function, remove current activity identification through `activityIdentificationPendingIntent`.
 
-   <pre><div id="copy-button17" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 7.1:
+   <pre><div id="copy-button31" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 7.1:
    activityIdentificationService.deleteActivityIdentificationUpdates(
        activityIdentificationPendingIntent
    )

@@ -7,7 +7,7 @@ When detecting an activity identification trigger event, the system broadcasts a
 
 1. In `ActivityIdentificationHelper.kt`, in `fromActivityToString()` function, return activity type as `String`.
 
-   <pre><div id="copy-button17" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 6.1:
+   <pre><div id="copy-button29" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 6.1:
    return when (activityType) {
        ActivityIdentificationData.STILL -> "standing"
        ActivityIdentificationData.WALKING -> "walking"
@@ -20,7 +20,7 @@ When detecting an activity identification trigger event, the system broadcasts a
 
 2. In `LocationBroadcastReceiver.kt`, override `onReceive()` method and use **when** statement to run related code block, if the action name of an intent matches triggered action. To get action name which set before when you created `PendingIntent`, use `getActivityIdentificationAction(`) function. Copy the code below, and paste into the statement code block. Obtain `ActivityIdentificationResponse` object from the intent. Then, use it to obtain `activityIdentificationData` calling `activityIdentificationDatas` method. Get activity type as `String` using `fromActivityToString()`. If the possibility more than equal to 70% pass the value to `createUserActivity()` method using `UserActivityRepositoryImpl`.
 
-   <pre><div id="copy-button17" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 6.2:
+   <pre><div id="copy-button30" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 6.2:
    val identificationResponse =
        ActivityIdentificationResponse.getDataFromIntent(intent)
    identificationResponse?.let {

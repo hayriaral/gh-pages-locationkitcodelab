@@ -18,9 +18,11 @@ You’ll be using the start branch, which is the starting point for the codelab.
 
 **Step 3:** Configure the AppGallery Connect plug-in, Maven repository address, build dependencies, obfuscation scripts, and permissions.
 
-<aside class="special">
-	<p><strong>Note:</strong> These items have been configured in the sample code. If any of them does not meet your requirements, change it in your own project.</p>
-</aside>
+<pre><div id="copy-button9" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code><span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"android.permission.ACTIVITY_RECOGNITION"</span><span class="tag">/&gt;</span><span class="pln"></span>
+<span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"com.huawei.hms.permission.ACTIVITY_RECOGNITION"</span><span class="tag">/&gt;</span>
+<span class="pln">
+</span></code></pre>
+
 **1. Configure the Maven repository address and AppGallery Connect plug-in in the project's build.gradle file.**
 
 - Go to **allprojects** \> **repositories** and configure the Maven repository address for the HMS Core SDK.
@@ -72,14 +74,14 @@ You’ll be using the start branch, which is the starting point for the codelab.
 
 - Add the following information under **apply plugin: 'com.android.application'** in the file header:
 
-  <pre><div id="copy-button6" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code><span class="pln">apply plugin</span><span class="pun">:</span><span class="pln"> </span><span class="str">'com.huawei.agconnect'</span><span class="pln">
+  <pre><div id="copy-button5" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code><span class="pln">apply plugin</span><span class="pun">:</span><span class="pln"> </span><span class="str">'com.huawei.agconnect'</span><span class="pln">
   	</span></code></pre>
 
 **3. Configure obfuscation scripts.**
 
 - Configure the following information in the **app/proguard-rules.pro** file:
 
-  <pre><div id="copy-button7" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code><span class="pun">-</span><span class="pln">ignorewarnings</span><span class="pln">
+  <pre><div id="copy-button6" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code><span class="pun">-</span><span class="pln">ignorewarnings</span><span class="pln">
   </span><span class="pun">-</span><span class="pln">keepattributes </span><span class="pun">*</span><span class="typ">Annotation</span><span class="pun">*</span><span class="pln">
   </span><span class="pun">-</span><span class="pln">keepattributes </span><span class="typ">Exceptions</span><span class="pln">
   </span><span class="pun">-</span><span class="pln">keepattributes </span><span class="typ">InnerClasses</span><span class="pln">
@@ -92,7 +94,7 @@ You’ll be using the start branch, which is the starting point for the codelab.
 
 - If you are using AndResGuard, add it to the allowlist in the obfuscation script file.
 
-  <pre><div id="copy-button8" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>
+  <pre><div id="copy-button7" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>
   <span class="str">"R.string.hms*"</span><span class="pun">,</span><span class="pln">
   </span><span class="str">"R.string.connect_server_fail_prompt_toast"</span><span class="pun">,</span><span class="pln">
   </span><span class="str">"R.string.getting_message_fail_prompt_toast"</span><span class="pun">,</span><span class="pln">

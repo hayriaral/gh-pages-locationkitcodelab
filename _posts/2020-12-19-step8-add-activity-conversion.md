@@ -7,9 +7,24 @@ description: 15
 
 You will create a `PendingIntent` in order to dynamically register to `BroadcastReceiver` through it.
 
-1. In `MainFragment.kt`, above the `onViewCreated()` method, create a private type of `PendingIntent` variable which named `activityConversionPendingIntent` with lazy initialization. `getActivityConversionAction()` returns action name as `String`, and `getActivityConversionRequestCode()` returns request code as `Integer`. Both are implemented in `ActivityIdentificationHelper.kt`.
+1. <pre><div id="copy-button32" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 7.1:
+   activityIdentificationService.deleteActivityIdentificationUpdates(
+       activityIdentificationPendingIntent
+   )
+       ?.run {
+           addOnSuccessListener {
+               //Activity Identification removed successfully.
+               Log.i(TAG, "Activity Identification has been stopped.")
+           }
+           addOnFailureListener {
+               //Activity Identification remove process failed.
+               Log.i(TAG, "Failed to stop Activity Identification.")
+           }
+       }
+   <span class="pln">
+   </span></code></pre>
 
-<pre><div id="copy-button17" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 8.1:
+<pre><div id="copy-button33" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 8.1:
 private val activityConversionPendingIntent: PendingIntent by lazy {
     val intent = Intent(context, LocationBroadcastReceiver::class.java)
     //Set an action for activity conversion's intent.
@@ -24,6 +39,7 @@ private val activityConversionPendingIntent: PendingIntent by lazy {
 <span class="pln">
 </span></code></pre>
 
+
 **Build activity conversion and create an activity conversion request**
 
 You will build an activity conversion information object and create an activity conversion request in order to listen activity conversions.
@@ -35,7 +51,7 @@ You will build an activity conversion information object and create an activity 
 
    Finally, return the activity conversion info.
 
-   <pre><div id="copy-button17" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 8.2:
+   <pre><div id="copy-button34" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 8.2:
    return ActivityConversionInfo.Builder()
        .setActivityType(activityType)
        .setConversionType(conversionType)
@@ -45,7 +61,7 @@ You will build an activity conversion information object and create an activity 
 
 2. In `MainFragment.kt`, in the `createActivityConversionRequest()` function, add activity conversion information objects into a list. Finally, pass the list as a parameter to `ActivityConversionRequest()` and return the object.
 
-   <pre><div id="copy-button17" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 8.3:
+   <pre><div id="copy-button35" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 8.3:
    val activityConversions: MutableList<ActivityConversionInfo> = ArrayList()
    activityConversions.add(
        buildActivityConversion(
@@ -97,9 +113,22 @@ You will build an activity conversion information object and create an activity 
 
 You will start activity conversion if activity recognition permission has been granted before.
 
-1. In `MainFragment.kt`, in `startActivityConversion()` function, use `activityIdentificationService` to add activity conversion. Add new activity conversion by passing `activityConversionPendingIntent`, and `createActivityConversionRequest()` functions to `createActivityConversionUpdates()` method.
-
-   <pre><div id="copy-button17" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 8.4:
+1. <pre><div id="copy-button36" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 8.4:
+activityIdentificationService.createActivityConversionUpdates(
+       createActivityConversionRequest(),
+       activityConversionPendingIntent
+   )?.run {
+       addOnSuccessListener {
+           Log.i(TAG, "Activity Conversion updates has been started.")
+       }
+       addOnFailureListener {
+           Log.i(TAG, "Failed to start Activity Conversion updates.")
+       }
+   }
+   <span class="pln">
+   </span></code></pre>
+   
+   <pre><div id="copy-button36" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 8.4:
    activityIdentificationService.createActivityConversionUpdates(
        createActivityConversionRequest(),
        activityConversionPendingIntent
