@@ -18,10 +18,11 @@ You’ll be using the start branch, which is the starting point for the codelab.
 
 **Step 3:** Configure the AppGallery Connect plug-in, Maven repository address, build dependencies, obfuscation scripts, and permissions.
 
-<pre><div id="copy-button9" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code><span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"android.permission.ACTIVITY_RECOGNITION"</span><span class="tag">/&gt;</span><span class="pln"></span>
-<span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"com.huawei.hms.permission.ACTIVITY_RECOGNITION"</span><span class="tag">/&gt;</span>
-<span class="pln">
-</span></code></pre>
+<aside class="special">
+	<p><strong>Note:</strong> These items have been configured in the sample code. If any of them
+does not meet your requirements, change it in your own project.</p>
+</aside>
+
 
 **1. Configure the Maven repository address and AppGallery Connect plug-in in the project's build.gradle file.**
 

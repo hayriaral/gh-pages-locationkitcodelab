@@ -7,19 +7,8 @@ description: 15
 
 You will create a `PendingIntent` in order to dynamically register to `BroadcastReceiver` through it.
 
-1. <pre><div id="copy-button24" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 4.1:
-geofenceService.deleteGeofenceList(geofencePendingIntent)?.run {
-       addOnSuccessListener {
-           //Geofence removed successfully.
-           Log.i(TAG, "Geofence has been removed.")
-       }
-       addOnFailureListener {
-           //Geofence remove process failed.
-           Log.i(TAG, "Failed to remove Geofence.")
-       }
-   }
-   <span class="pln">
-   </span></code></pre>
+1. In `MainFragment.kt`, above the `onViewCreated()` method, create a private type of `PendingIntent` variable which named `activityIdentificationPendingIntent` with lazy initialization. `getActivityIdentificationAction()` returns action name as `String`, and `getActivityIdentificationRequestCode()` returns request code as `Integer`. Both are implemented in `ActivityIdentificationHelper.kt`.
+
    
    <pre><div id="copy-button25" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 5.1:
    private val activityIdentificationPendingIntent: PendingIntent by lazy {
