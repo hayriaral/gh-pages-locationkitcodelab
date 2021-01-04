@@ -7,38 +7,22 @@ description: 15
 
 You will create a `PendingIntent` in order to dynamically register to `BroadcastReceiver` through it.
 
-1. <pre><div id="copy-button32" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 7.1:
-   activityIdentificationService.deleteActivityIdentificationUpdates(
-       activityIdentificationPendingIntent
-   )
-       ?.run {
-           addOnSuccessListener {
-               //Activity Identification removed successfully.
-               Log.i(TAG, "Activity Identification has been stopped.")
-           }
-           addOnFailureListener {
-               //Activity Identification remove process failed.
-               Log.i(TAG, "Failed to stop Activity Identification.")
-           }
-       }
+1. In `MainFragment.kt`, above the `onViewCreated()` method, create a private type of `PendingIntent` variable which named `activityConversionPendingIntent` with lazy initialization. `getActivityConversionAction()` returns action name as `String`, and `getActivityConversionRequestCode()` returns request code as `Integer`. Both are implemented in `ActivityIdentificationHelper.kt`.
+
+   <pre><div id="copy-button33" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 8.1:
+   private val activityConversionPendingIntent: PendingIntent by lazy {
+       val intent = Intent(context, LocationBroadcastReceiver::class.java)
+       //Set an action for activity conversion's intent.
+       intent.action = getActivityConversionUpdatesAction()
+       PendingIntent.getBroadcast(
+           context,
+           getActivityConversionRequestCode(),
+           intent,
+           PendingIntent.FLAG_UPDATE_CURRENT
+       )
+   }
    <span class="pln">
    </span></code></pre>
-
-<pre><div id="copy-button33" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 8.1:
-private val activityConversionPendingIntent: PendingIntent by lazy {
-    val intent = Intent(context, LocationBroadcastReceiver::class.java)
-    //Set an action for activity conversion's intent.
-    intent.action = getActivityConversionUpdatesAction()
-    PendingIntent.getBroadcast(
-        context,
-        getActivityConversionRequestCode(),
-        intent,
-        PendingIntent.FLAG_UPDATE_CURRENT
-    )
-}
-<span class="pln">
-</span></code></pre>
-
 
 **Build activity conversion and create an activity conversion request**
 
