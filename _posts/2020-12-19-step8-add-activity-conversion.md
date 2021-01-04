@@ -62,7 +62,7 @@ You will build an activity conversion information object and create an activity 
 2. In `MainFragment.kt`, in the `createActivityConversionRequest()` function, add activity conversion information objects into a list. Finally, pass the list as a parameter to `ActivityConversionRequest()` and return the object.
 
    <pre><div id="copy-button35" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 8.3:
-   val activityConversions: MutableList<ActivityConversionInfo> = ArrayList()
+   val activityConversions: MutableList&lsaquo;ActivityConversionInfo&rsaquo; = ArrayList()
    activityConversions.add(
        buildActivityConversion(
            ActivityIdentificationData.STILL,
