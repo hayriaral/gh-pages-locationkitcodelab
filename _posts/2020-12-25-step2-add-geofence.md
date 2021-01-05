@@ -66,7 +66,7 @@ You will build a geofence object and a geofence request in order to add geofence
 
    <pre><div id="copy-button16" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 2.5:
    return Geofence.Builder()
-       .setUniqueId(Id)
+       .setUniqueId(id)
        .setRoundArea(latLng.latitude, latLng.longitude, radius)
        .setConversions(transitionTypes)
        .setValidContinueTime(Geofence.GEOFENCE_NEVER_EXPIRE)
