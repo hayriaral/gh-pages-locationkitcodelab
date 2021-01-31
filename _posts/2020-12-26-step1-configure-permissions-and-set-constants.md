@@ -35,8 +35,11 @@ To use activity identification and geofence in your app, you must implement the 
    You can find the API key, in AppGallery console, in **Project setting** > **General information.**
 
    <div style="padding: 5px">
-           <img style="padding: 5px" src="https://raw.githubusercontent.com/hayricaral/gh-pages-locationkitcodelab/main/assets/agc-api-key-img.PNG">
+           <img style="padding: 5px" src="https://raw.githubusercontent.com/hayricaral/gh-pages-locationkitcodelab/main/assets/agc-api-key-img.PNG" width="700" height="350">
    </div>
+   
+   
+   
    
    <pre><div id="copy-button11" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>//TODO 1.4:
            private const val PACKAGE_NAME = "YOUR PACKAGE NAME"
