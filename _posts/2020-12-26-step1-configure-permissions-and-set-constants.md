@@ -35,9 +35,8 @@ To use activity identification and geofence in your app, you must implement the 
    You can find the API key, in AppGallery console, in **Project setting** > **General information.**
 
    <div style="padding: 5px">
-           <img style="padding: 5px" src="https://raw.githubusercontent.com/hayricaral/gh-pages-locationkitcodelab/main/assets/agc-api-key-img.PNG" width="700" height="350">
+       <img style="width=700px ; height=350px" src="https://raw.githubusercontent.com/hayricaral/gh-pages-locationkitcodelab/main/assets/agc-api-key-img.PNG">
    </div>
-   
    
    
    
