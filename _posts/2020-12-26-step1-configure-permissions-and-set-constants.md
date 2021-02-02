@@ -47,4 +47,3 @@ To use activity identification and geofence in your app, you must implement the 
    </span></code></pre>
 
 
-
